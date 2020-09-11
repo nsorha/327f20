@@ -120,7 +120,7 @@
 
 \title{Tools for Working with Data - 327}
 \author{Nicole Sorhagen, Ph.D.}
-\date{2020-09-01}
+\date{2020-09-11}
 
 \begin{document}
 \maketitle
@@ -189,7 +189,7 @@ Related to this point, do not be afraid to copy and paste with using R. I often 
 \hypertarget{layout-of-rstudio}{%
 \section{Layout of Rstudio}\label{layout-of-rstudio}}
 
-Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describe in turn next.
+Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describes in turn next.
 
 \hypertarget{console}{%
 \subsection{Console}\label{console}}
@@ -198,7 +198,7 @@ The console panel of R studio is where you can type commands (or R code) and whe
 
 In its most basic form, you can think of R as a fancy calculator.
 
-For example: In the console type \texttt{2+2} and then press RETURN on your keyboard. The answer `4' will apear on the next line.
+For example: In the console type \texttt{2+2} and then press RETURN on your keyboard. The answer `4' will appear on the next line.
 
 The \texttt{\textgreater{}} in the last line of the console means that the console is ready for a command (see red circle in the picture above).
 
@@ -1052,6 +1052,131 @@ For the present example, the code is:
 Note that the table is laid out differently than the Tidyverse one above. But you can still easily see that 10 students did not eat cheese the night before Exam 2 and 11 students did eat cheese the night before the exam.
 
 \emph{Some people think that the Tidyverse and Psych packages make computing descriptive statistics a bit easier/more direct/better/easier to understand than base R. You should decide which you prefer. (I tend to prefer Tidyverse and Psych). Another packages that compute descriptive statistics is skimr }
+
+\hypertarget{basic-data-transformations}{%
+\chapter{Basic Data Transformations}\label{basic-data-transformations}}
+
+\textbf{NOTE: please create a new script for this chapter called week 4}
+
+For this section we will use a dataset from SPSS for Research Methods by Wilson-Doenges, which comes with our Morling text. \href{https://docs.google.com/document/d/1V1vHljcqtVYXE-2iHcdcR0FNzjdCmJXc6Je5TuWMPuk/edit?usp=sharing}{Here} is the survey that Wilson-Doenges distributed to 45 students.
+
+You can find the data on D2L called \texttt{‘wilson.csv’}.
+
+Please download it and take a few minutes to look over the survey (open the link above in the word `here') and study how Wilson-Doenges entered in her data.
+
+The first column is an arbitrary ID number assigned to each student to ensure anonymity. The next 4 columns correspond with the first four questions of the survey.
+
+The second part of the survey measures students' positive opinions about a research methods class. Wilson calls it the positive opinions about research methods scale (PORMS). In the data file, these are item1, item2, item3, item4, and item5.
+
+The last two questions of the survey ask students to report their motivation to achieve and their GPA (the last two columns).
+
+First load the readr and tidyverse packages (if they are not loaded already):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(readr)}
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+Then assign the data to an object using the following code (or you can use the GUI method):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wilson <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"wilson.csv"}\NormalTok{) }
+\end{Highlighting}
+\end{Shaded}
+
+While you were looking at the survey, you may have noticed that items 2 and 4 of the PORMS are negatively worded; While items 1, 3, and 5 are positively worded. This means that strongly agree (i.e.~the number 5) indicates that students have a negative opinion of research methods classes for items 1 and 4 and that they have a positive opinion of the class for items 1, 3, and 5.
+
+We need all of the items to go in the same direction. So, we need to \textbf{reverse code} items 2 and 4 so that higher scores reflect more positive opinions. To reverse code, we will use the \textbf{mutate()} and \textbf{recode()} functions of the dplyr package (that is part of tidyverse), which adds new variables or changes existing ones.
+* mutate() is used to add variables (or columns) to a dataset.
+* recode() is best used inside a mutate (). Recode takes the form of old\_value = new\_value.
+
+The command to reverse code item 2 is:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wilson <-}\StringTok{ }\NormalTok{wilson }\OperatorTok{%>%}
+\StringTok{   }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{item2r =}\KeywordTok{recode}\NormalTok{(item2, }\StringTok{`}\DataTypeTok{1}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{5}\NormalTok{, }\StringTok{`}\DataTypeTok{2}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{4}\NormalTok{, }\StringTok{`}\DataTypeTok{3}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{3}\NormalTok{, }\StringTok{`}\DataTypeTok{4}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{2}\NormalTok{, }\StringTok{`}\DataTypeTok{5}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{item2r} will be the name of the new variable.
+\item
+  \texttt{item2} is the item that is being recoded.
+\item
+  Next is the list of the old and new variables
+
+  \begin{itemize}
+  \tightlist
+  \item
+    On the left is the old variable and it must be in back ticks (`) when it is a number
+  \item
+    Note that the back tick is not the same as a comma ( \texttt{\textquotesingle{}} ). The back tick is on the same key as \texttt{\textasciitilde{}} (while the comma is on the same key as \texttt{"})
+  \item
+    String (AKA text) variables should be in quotes (\texttt{"}) instead of back ticks
+  \item
+    On the right is the new value
+  \end{itemize}
+\item
+  The \texttt{wilson\ \textless{}-} part of the command saves the variable you created with the rest of the code
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Here we are saving over the original dataset.
+  \item
+    Some people prefer to create a new dataset. For example \texttt{wilsonr\ \textless{}-} would create a new object called wilsonr and the wilson data would not change.
+  \item
+    Without this part of the code, your new variable will not be saved.\\
+    After you run the code, there should be 13 variables in the wilson dataset (there was 12 originally).
+  \end{itemize}
+\end{itemize}
+
+\includegraphics{img/mutatewilson.png}
+
+Click on the word `wilson' in the environment panel to view the data.\\
+\includegraphics{img/wilsonview.png}
+
+The reverse coded item 2 variable (item2r) that we just created will be in the last column.\\
+\includegraphics{img/wilsonview2.png}\\
+(You can expand the data view by dragging the center median between the dataview and the environment to the right.)\\
+You can see that the first student rated the second item as a 1 and it is now a 5 in the reversed coded variable.\\
+Next create a new item for item 4. Here is the code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wilson <-}\StringTok{ }\NormalTok{wilson }\OperatorTok{%>%}\StringTok{ }
+\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{item4r =}\KeywordTok{recode}\NormalTok{(item4, }\StringTok{`}\DataTypeTok{1}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{5}\NormalTok{, }\StringTok{`}\DataTypeTok{2}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{4}\NormalTok{, }\StringTok{`}\DataTypeTok{3}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{3}\NormalTok{, }\StringTok{`}\DataTypeTok{4}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{2}\NormalTok{, }\StringTok{`}\DataTypeTok{5}\StringTok{`}\NormalTok{ =}\StringTok{ }\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+You should now have 14 variables in the wilson dataset.
+
+Next let's create a summary score for the PORMS measure. We will use the mutate() function to do this using this code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wilson <-}\StringTok{ }\NormalTok{wilson }\OperatorTok{%>%}\StringTok{ }
+\StringTok{    }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{porms =}\NormalTok{ item1 }\OperatorTok{+}\StringTok{ }\NormalTok{item2r }\OperatorTok{+}\StringTok{ }\NormalTok{item3 }\OperatorTok{+}\StringTok{ }\NormalTok{item4r }\OperatorTok{+}\StringTok{ }\NormalTok{item5)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  porms is the name of the new column\\
+\item
+  On the right of the equal sign is how the new variable is defined.
+\end{itemize}
+
+Your wilson dataset should now have 15 variables.
+
+(I created a sum score here because that is what Wilson-Doenges did. I think an average score would work here as well.)
 
   \bibliography{book.bib,packages.bib}
 

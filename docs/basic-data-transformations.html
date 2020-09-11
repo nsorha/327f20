@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Basic Data Transformations | Tools for Working with Data - 327</title>
+  <meta name="description" content="This GitBook describes tools 327 students can use to work with data." />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Basic Data Transformations | Tools for Working with Data - 327" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This GitBook describes tools 327 students can use to work with data." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Basic Data Transformations | Tools for Working with Data - 327" />
+  
+  <meta name="twitter:description" content="This GitBook describes tools 327 students can use to work with data." />
+  
+
+<meta name="author" content="Nicole Sorhagen, Ph.D." />
+
+
+<meta name="date" content="2020-09-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="descriptive-statistics.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A GitBook for Teaching</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this book</a></li>
+<li class="chapter" data-level="2" data-path="set-up-project-on-rstudio-cloud.html"><a href="set-up-project-on-rstudio-cloud.html"><i class="fa fa-check"></i><b>2</b> Set up project on Rstudio Cloud</a></li>
+<li class="chapter" data-level="3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#console"><i class="fa fa-check"></i><b>3.1.1</b> Console</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#script"><i class="fa fa-check"></i><b>3.1.2</b> Script</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#environment-and-history"><i class="fa fa-check"></i><b>3.1.3</b> Environment and history</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#importing-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2</b> Importing data into Rstudio cloud</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#upload-the-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2.1</b> Upload the data into Rstudio Cloud</a></li>
+<li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#import-data"><i class="fa fa-check"></i><b>3.2.2</b> Import data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
+<li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="packages.html"><a href="packages.html#installing-packages-using-point-and-click-gui"><i class="fa fa-check"></i><b>4.1.1</b> Installing packages using point and click (GUI)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="packages.html"><a href="packages.html#installing-packages-using-code"><i class="fa fa-check"></i><b>4.1.2</b> Installing packages using code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="packages.html"><a href="packages.html#loading-packages"><i class="fa fa-check"></i><b>4.2</b> Loading Packages</a></li>
+<li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#misc"><i class="fa fa-check"></i><b>4.3</b> Misc</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="packages.html"><a href="packages.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>5</b> Picturing Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>5.1</b> Histograms</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-base-r"><i class="fa fa-check"></i><b>5.1.1</b> Histograms with base R</a></li>
+<li class="chapter" data-level="5.1.2" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-tidyverse"><i class="fa fa-check"></i><b>5.1.2</b> Histograms with tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>5.2</b> Scatterplots</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="picturing-data.html"><a href="picturing-data.html#two-continuous-variables"><i class="fa fa-check"></i><b>5.2.1</b> Two continuous variables</a></li>
+<li class="chapter" data-level="5.2.2" data-path="picturing-data.html"><a href="picturing-data.html#one-continuous-and-one-categorical-variable"><i class="fa fa-check"></i><b>5.2.2</b> One continuous and one categorical variable</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="picturing-data.html"><a href="picturing-data.html#additional-resources"><i class="fa fa-check"></i><b>5.3</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-tidyverse-and-psych-packages."><i class="fa fa-check"></i><b>6.1</b> Descriptive statistics using Tidyverse and Psych packages.</a></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-base-r"><i class="fa fa-check"></i><b>6.2</b> Descriptive statistics using base R</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-data-transformations.html"><a href="basic-data-transformations.html"><i class="fa fa-check"></i><b>7</b> Basic Data Transformations</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Working with Data - 327</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basic-data-transformations" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Basic Data Transformations</h1>
+<p><strong>NOTE: please create a new script for this chapter called week 4</strong></p>
+<p>For this section we will use a dataset from SPSS for Research Methods by Wilson-Doenges, which comes with our Morling text. <a href="https://docs.google.com/document/d/1V1vHljcqtVYXE-2iHcdcR0FNzjdCmJXc6Je5TuWMPuk/edit?usp=sharing">Here</a> is the survey that Wilson-Doenges distributed to 45 students.</p>
+<p>You can find the data on D2L called <code>‘wilson.csv’</code>.</p>
+<p>Please download it and take a few minutes to look over the survey (open the link above in the word ‘here’) and study how Wilson-Doenges entered in her data.</p>
+<p>The first column is an arbitrary ID number assigned to each student to ensure anonymity. The next 4 columns correspond with the first four questions of the survey.</p>
+<p>The second part of the survey measures students’ positive opinions about a research methods class. Wilson calls it the positive opinions about research methods scale (PORMS). In the data file, these are item1, item2, item3, item4, and item5.</p>
+<p>The last two questions of the survey ask students to report their motivation to achieve and their GPA (the last two columns).</p>
+<p>First load the readr and tidyverse packages (if they are not loaded already):</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="basic-data-transformations.html#cb20-1"></a><span class="kw">library</span>(readr)</span>
+<span id="cb20-2"><a href="basic-data-transformations.html#cb20-2"></a><span class="kw">library</span>(tidyverse)</span></code></pre></div>
+<p>Then assign the data to an object using the following code (or you can use the GUI method):</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="basic-data-transformations.html#cb21-1"></a>wilson &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;wilson.csv&quot;</span>) </span></code></pre></div>
+<p>While you were looking at the survey, you may have noticed that items 2 and 4 of the PORMS are negatively worded; While items 1, 3, and 5 are positively worded. This means that strongly agree (i.e. the number 5) indicates that students have a negative opinion of research methods classes for items 1 and 4 and that they have a positive opinion of the class for items 1, 3, and 5.</p>
+<p>We need all of the items to go in the same direction. So, we need to <strong>reverse code</strong> items 2 and 4 so that higher scores reflect more positive opinions. To reverse code, we will use the <strong>mutate()</strong> and <strong>recode()</strong> functions of the dplyr package (that is part of tidyverse), which adds new variables or changes existing ones.
+* mutate() is used to add variables (or columns) to a dataset.
+* recode() is best used inside a mutate (). Recode takes the form of old_value = new_value.</p>
+<p>The command to reverse code item 2 is:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="basic-data-transformations.html#cb22-1"></a>wilson &lt;-<span class="st"> </span>wilson <span class="op">%&gt;%</span></span>
+<span id="cb22-2"><a href="basic-data-transformations.html#cb22-2"></a><span class="st">   </span><span class="kw">mutate</span>(<span class="dt">item2r =</span><span class="kw">recode</span>(item2, <span class="st">`</span><span class="dt">1</span><span class="st">`</span> =<span class="st"> </span><span class="dv">5</span>, <span class="st">`</span><span class="dt">2</span><span class="st">`</span> =<span class="st"> </span><span class="dv">4</span>, <span class="st">`</span><span class="dt">3</span><span class="st">`</span> =<span class="st"> </span><span class="dv">3</span>, <span class="st">`</span><span class="dt">4</span><span class="st">`</span> =<span class="st"> </span><span class="dv">2</span>, <span class="st">`</span><span class="dt">5</span><span class="st">`</span> =<span class="st"> </span><span class="dv">1</span>))</span></code></pre></div>
+<ul>
+<li><code>item2r</code> will be the name of the new variable.</li>
+<li><code>item2</code> is the item that is being recoded.</li>
+<li>Next is the list of the old and new variables
+<ul>
+<li>On the left is the old variable and it must be in back ticks (`) when it is a number</li>
+<li>Note that the back tick is not the same as a comma ( <code>'</code> ). The back tick is on the same key as <code>~</code> (while the comma is on the same key as <code>"</code>)</li>
+<li>String (AKA text) variables should be in quotes (<code>"</code>) instead of back ticks</li>
+<li>On the right is the new value</li>
+</ul></li>
+<li>The <code>wilson &lt;-</code> part of the command saves the variable you created with the rest of the code
+<ul>
+<li>Here we are saving over the original dataset.</li>
+<li>Some people prefer to create a new dataset. For example <code>wilsonr &lt;-</code> would create a new object called wilsonr and the wilson data would not change.</li>
+<li>Without this part of the code, your new variable will not be saved.<br />
+After you run the code, there should be 13 variables in the wilson dataset (there was 12 originally).</li>
+</ul></li>
+</ul>
+<p><img src="img/mutatewilson.png" /></p>
+<p>Click on the word ‘wilson’ in the environment panel to view the data.<br />
+<img src="img/wilsonview.png" /></p>
+<p>The reverse coded item 2 variable (item2r) that we just created will be in the last column.<br />
+<img src="img/wilsonview2.png" /><br />
+(You can expand the data view by dragging the center median between the dataview and the environment to the right.)<br />
+You can see that the first student rated the second item as a 1 and it is now a 5 in the reversed coded variable.<br />
+Next create a new item for item 4. Here is the code:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="basic-data-transformations.html#cb23-1"></a>wilson &lt;-<span class="st"> </span>wilson <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-2"><a href="basic-data-transformations.html#cb23-2"></a><span class="kw">mutate</span>(<span class="dt">item4r =</span><span class="kw">recode</span>(item4, <span class="st">`</span><span class="dt">1</span><span class="st">`</span> =<span class="st"> </span><span class="dv">5</span>, <span class="st">`</span><span class="dt">2</span><span class="st">`</span> =<span class="st"> </span><span class="dv">4</span>, <span class="st">`</span><span class="dt">3</span><span class="st">`</span> =<span class="st"> </span><span class="dv">3</span>, <span class="st">`</span><span class="dt">4</span><span class="st">`</span> =<span class="st"> </span><span class="dv">2</span>, <span class="st">`</span><span class="dt">5</span><span class="st">`</span> =<span class="st"> </span><span class="dv">1</span>))</span></code></pre></div>
+<p>You should now have 14 variables in the wilson dataset.</p>
+<p>Next let’s create a summary score for the PORMS measure. We will use the mutate() function to do this using this code:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="basic-data-transformations.html#cb24-1"></a>wilson &lt;-<span class="st"> </span>wilson <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb24-2"><a href="basic-data-transformations.html#cb24-2"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">porms =</span> item1 <span class="op">+</span><span class="st"> </span>item2r <span class="op">+</span><span class="st"> </span>item3 <span class="op">+</span><span class="st"> </span>item4r <span class="op">+</span><span class="st"> </span>item5)</span></code></pre></div>
+<ul>
+<li>porms is the name of the new column<br />
+</li>
+<li>On the right of the equal sign is how the new variable is defined.</li>
+</ul>
+<p>Your wilson dataset should now have 15 variables.</p>
+<p>(I created a sum score here because that is what Wilson-Doenges did. I think an average score would work here as well.)</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="descriptive-statistics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cjvanlissa/gitbook-demo/edit/master/datatran.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Tools for working with data 327.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

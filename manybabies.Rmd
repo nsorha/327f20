@@ -1,0 +1,87 @@
+
+
+```{r message=FALSE, warning=FALSE}
+
+library(readr)
+library(tidyverse)
+mbaby <- read_csv("ICCL-BCns.csv") 
+mbaby <- read_csv("musdev-utm_TrialDatans.csv") 
+mbaby <- read_csv("earlysocog-fm_9-12ns.csv") 
+
+#gmbaby <- mbaby %>% 
+#  group_by(subid, trial_type) %>% 
+#  mutate(tlook = sum(looking_time))
+
+
+
+mbabys <- mbaby %>% select(subid, stimulus, looking_time)
+
+mbabywide <- mbabys %>% pivot_wider(names_from = stimulus, values_from = looking_time)
+
+
+#mbabywide <- reshape(mbabys, 
+#                     timevar = "stimulus", 
+#                     idvar = c("subid", "lab"),
+#                     direction = "wide")
+
+
+#mbabywide <- reshape(mbabys, 
+#                     idvar = "subid",
+#                     timevar = "stimulus", 
+#                     v.names = c("looking_time"),
+#                     direction = "wide")
+
+
+write_csv(mbabywide, "ICCLbc.csv")
+write_csv(mbabywide, "musdevutm.csv")
+write_csv(mbabywide, "fm9to12.csv")
+
+```
+
+
+```{r message=FALSE, warning=FALSE}
+
+ICCLbc <- read_csv("ICCLbc.csv") 
+
+ICCLbc <- ICCLbc %>% 
+    mutate(ids = IDS1 + IDS2 + IDS3 + IDS4 + IDS5 + IDS6 + IDS7 + IDS8)
+
+ICCLbc <- ICCLbc %>% 
+    mutate(ads = ADS1 + ADS2 + ADS3 + ADS4 + ADS5 + ADS6 + ADS7 + ADS8)
+
+
+t.test(ICCLbc$ids, ICCLbc$ads, paired = TRUE)
+
+musdevutm <- read_csv("musdevutm.csv") 
+
+musdevutm <- musdevutm %>% 
+    mutate(ids = IDS1 + IDS2 + IDS3 + IDS4 + IDS5 + IDS6 + IDS7 + IDS8)
+
+musdevutm <- musdevutm %>% 
+    mutate(ads = ADS1 + ADS2 + ADS3 + ADS4 + ADS5 + ADS6 + ADS7 + ADS8)
+
+
+t.test(musdevutm$ids, musdevutm$ads, paired = TRUE)
+
+
+fm9to12 <- read_csv("fm9to12.csv") 
+
+fm9to12 <- fm9to12 %>% 
+    mutate(ids = IDS1 + IDS2 + IDS3 + IDS4 + IDS5 + IDS6 + IDS7 + IDS8)
+
+fm9to12 <- fm9to12 %>% 
+    mutate(ads = ADS1 + ADS2 + ADS3 + ADS4 + ADS5 + ADS6 + ADS7 + ADS8)
+
+
+
+t.test(fm9to12$ids, fm9to12$ads, paired = TRUE)
+
+
+
+
+ggplot(fm9to12, aes(x = as.factor(cheese), y = exam2pts)) +
+  geom_point(color = "purple") +
+  stat_summary(fun.data = mean_cl_normal)
+
+```
+

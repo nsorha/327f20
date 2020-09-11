@@ -8,14 +8,14 @@ Related to this point, do not be afraid to copy and paste with using R. I often 
 
 ## Layout of Rstudio
 
-Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describe in turn next.
+Rstudio has four panes: the console panel, the script panel, the environment and history panel, and the files and plots panel. Each will be describes in turn next.
 
 ### Console 
 The console panel of R studio is where you can type commands (or R code) and where you will see the output of commands. 
 
 In its most basic form, you can think of R as a fancy calculator. 
 
-For example: In the console type `2+2` and then press RETURN on your keyboard. The answer '4' will apear on the next line. 
+For example: In the console type `2+2` and then press RETURN on your keyboard. The answer '4' will appear on the next line. 
 
 The `>` in the last line of the console means that the console is ready for a command (see red circle in the picture above). 
 
