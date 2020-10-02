@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Interrater reliability | Tools for Working with Data - 327</title>
+  <meta name="description" content="This GitBook describes tools 327 students can use to work with data." />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Interrater reliability | Tools for Working with Data - 327" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This GitBook describes tools 327 students can use to work with data." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Interrater reliability | Tools for Working with Data - 327" />
+  
+  <meta name="twitter:description" content="This GitBook describes tools 327 students can use to work with data." />
+  
+
+<meta name="author" content="Nicole Sorhagen, Ph.D." />
+
+
+<meta name="date" content="2020-10-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="basic-data-transformations.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A GitBook for Teaching</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this book</a></li>
+<li class="chapter" data-level="2" data-path="set-up-project-on-rstudio-cloud.html"><a href="set-up-project-on-rstudio-cloud.html"><i class="fa fa-check"></i><b>2</b> Set up project on Rstudio Cloud</a></li>
+<li class="chapter" data-level="3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#console"><i class="fa fa-check"></i><b>3.1.1</b> Console</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#script"><i class="fa fa-check"></i><b>3.1.2</b> Script</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#environment-and-history"><i class="fa fa-check"></i><b>3.1.3</b> Environment and history</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#importing-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2</b> Importing data into Rstudio cloud</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#upload-the-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2.1</b> Upload the data into Rstudio Cloud</a></li>
+<li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#import-data"><i class="fa fa-check"></i><b>3.2.2</b> Import data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
+<li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="packages.html"><a href="packages.html#installing-packages-using-point-and-click-gui"><i class="fa fa-check"></i><b>4.1.1</b> Installing packages using point and click (GUI)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="packages.html"><a href="packages.html#installing-packages-using-code"><i class="fa fa-check"></i><b>4.1.2</b> Installing packages using code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="packages.html"><a href="packages.html#loading-packages"><i class="fa fa-check"></i><b>4.2</b> Loading Packages</a></li>
+<li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#misc"><i class="fa fa-check"></i><b>4.3</b> Misc</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="packages.html"><a href="packages.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>5</b> Picturing Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>5.1</b> Histograms</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-base-r"><i class="fa fa-check"></i><b>5.1.1</b> Histograms with base R</a></li>
+<li class="chapter" data-level="5.1.2" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-tidyverse"><i class="fa fa-check"></i><b>5.1.2</b> Histograms with tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>5.2</b> Scatterplots</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="picturing-data.html"><a href="picturing-data.html#two-continuous-variables"><i class="fa fa-check"></i><b>5.2.1</b> Two continuous variables</a></li>
+<li class="chapter" data-level="5.2.2" data-path="picturing-data.html"><a href="picturing-data.html#one-continuous-and-one-categorical-variable"><i class="fa fa-check"></i><b>5.2.2</b> One continuous and one categorical variable</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="picturing-data.html"><a href="picturing-data.html#additional-resources"><i class="fa fa-check"></i><b>5.3</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-tidyverse-and-psych-packages."><i class="fa fa-check"></i><b>6.1</b> Descriptive statistics using Tidyverse and Psych packages.</a></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-base-r"><i class="fa fa-check"></i><b>6.2</b> Descriptive statistics using base R</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-data-transformations.html"><a href="basic-data-transformations.html"><i class="fa fa-check"></i><b>7</b> Basic Data Transformations</a></li>
+<li class="chapter" data-level="8" data-path="interrater-reliability.html"><a href="interrater-reliability.html"><i class="fa fa-check"></i><b>8</b> Interrater reliability</a><ul>
+<li class="chapter" data-level="8.1" data-path="interrater-reliability.html"><a href="interrater-reliability.html#data-analysis"><i class="fa fa-check"></i><b>8.1</b> Data analysis</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="interrater-reliability.html"><a href="interrater-reliability.html#scatterplot"><i class="fa fa-check"></i><b>8.1.1</b> Scatterplot</a></li>
+<li class="chapter" data-level="8.1.2" data-path="interrater-reliability.html"><a href="interrater-reliability.html#correlation-coefficient"><i class="fa fa-check"></i><b>8.1.2</b> Correlation coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="interrater-reliability.html"><a href="interrater-reliability.html#data-analysis-by-participant"><i class="fa fa-check"></i><b>8.2</b> Data analysis by participant</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="interrater-reliability.html"><a href="interrater-reliability.html#scatterplot-1"><i class="fa fa-check"></i><b>8.2.1</b> Scatterplot</a></li>
+<li class="chapter" data-level="8.2.2" data-path="interrater-reliability.html"><a href="interrater-reliability.html#correlation-coefficient-1"><i class="fa fa-check"></i><b>8.2.2</b> Correlation coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="interrater-reliability.html"><a href="interrater-reliability.html#overall-conculsion"><i class="fa fa-check"></i><b>8.3</b> Overall conculsion</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Working with Data - 327</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="interrater-reliability" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Interrater reliability</h1>
+<p><strong>Interrater reliability</strong> refers to the consistency between different rater’s observations of the same thing.</p>
+<p>Here I am going to show you how to measure interrater reliability using the ManyBabies looking time data. You should remember that the ManyBabies project operationalized infant preference as the amount of time the babies looked at a screen.</p>
+<p>This <a href="https://docs.google.com/spreadsheets/d/1Oth1KPJmQaqoQsrt09ADwI9Qyn9MsvEWMAQfj60ici8/edit?usp=sharing">file</a> contains my looking time data, the ManyBabies’s looking time data, and the data of a “group member”, DK (I do not have a group, so I used the data from a student who email it to me to see if it was right). Note that this is three versions of the same data. We all watched the same babies and recorded their looking time for each trail.</p>
+<p>We will use the scatterplot and a correlation coefficient to assess interrater reliability because looking time is on a continuous scale. Scatterplots and correlation coefficients show the associations between variables, or observations.</p>
+<p>When measuring interrater reliability of a categorical variable, you should use percent agreement or Cohen’s Kappa, which is percent agreement corrected for chance agreement.</p>
+<p>First load the necessary packages:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="interrater-reliability.html#cb25-1"></a><span class="kw">library</span>(readr)</span>
+<span id="cb25-2"><a href="interrater-reliability.html#cb25-2"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb25-3"><a href="interrater-reliability.html#cb25-3"></a><span class="kw">library</span>(psych)</span></code></pre></div>
+<p>Then load the data:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="interrater-reliability.html#cb26-1"></a>irr &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;datacollectionns.csv&quot;</span>) </span></code></pre></div>
+<div id="data-analysis" class="section level2">
+<h2><span class="header-section-number">8.1</span> Data analysis</h2>
+<div id="scatterplot" class="section level3">
+<h3><span class="header-section-number">8.1.1</span> Scatterplot</h3>
+<p>First create scatterplots of the relation between the 3 observations.</p>
+<ol style="list-style-type: decimal">
+<li>My looking times and the ManyBabies looking times:</li>
+</ol>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="interrater-reliability.html#cb27-1"></a><span class="kw">ggplot</span>(irr, <span class="kw">aes</span>(<span class="dt">x=</span>looking_time_ns, <span class="dt">y=</span>looking_time_org)) <span class="op">+</span></span>
+<span id="cb27-2"><a href="interrater-reliability.html#cb27-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-327_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>The scatterplot shows a strong positive relation between the two independent ratings of the baby’s looking time. All data points are within the range of possible values. (though it does look like there is an outlier - I am consistent with ManyBabies in identifying it. What to do about the outlier is a separate issue. I would hope it was a trail period because then that data will not be used anyway.)</p>
+<ol start="2" style="list-style-type: decimal">
+<li>My looking times and the looking times of my group member, DK:</li>
+</ol>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="interrater-reliability.html#cb28-1"></a><span class="kw">ggplot</span>(irr, <span class="kw">aes</span>(<span class="dt">x=</span>looking_time_dk, <span class="dt">y=</span>looking_time_org)) <span class="op">+</span></span>
+<span id="cb28-2"><a href="interrater-reliability.html#cb28-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-327_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>The scatterplot also shows a strong positive relation between my measurements of infant’s looking times and DK’s measurements. Again, maybe an outlier or two. But DK and I are in a fair amount of agreement about them.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>DK’s looking times and the ManyBabies looking times:</li>
+</ol>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="interrater-reliability.html#cb29-1"></a><span class="kw">ggplot</span>(irr, <span class="kw">aes</span>(<span class="dt">x=</span>looking_time_dk, <span class="dt">y=</span>looking_time_org)) <span class="op">+</span></span>
+<span id="cb29-2"><a href="interrater-reliability.html#cb29-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-327_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>This scatterplot also shows a strong positive relation. DK’s measurements of infant’s looking times are consistent with the ManyBabies’s looking times. (Good job DK!)</p>
+<p>NOTE that you will have more scatterplots because you will have more group members.</p>
+</div>
+<div id="correlation-coefficient" class="section level3">
+<h3><span class="header-section-number">8.1.2</span> Correlation coefficient</h3>
+<p>Next let’s create a correlation matrix of the three observations. We will use the <code>corr.test()</code> function to calculate the correlation coeffients, confidence intervals and NHST (Null Hypothesis Significance Testing). The <code>corr.test()</code> function is part of the Psych package and the organization of the code uses Tidyverse.</p>
+<p>Here is what the code will look like:</p>
+<p><code>irr %&gt;%</code><br />
+<code>select(looking_time_ns, looking_time_org, looking_time_dk) %&gt;%</code><br />
+<code>corr.test() %&gt;%</code><br />
+<code>print(short=FALSE)</code></p>
+<ul>
+<li>The <code>irr</code> tells R to use the data in the irr object<br />
+</li>
+<li>the <code>select()</code> selects the variables that we want to include in the correlation matrix. Without this, every variable in the irr dataset would be included in the correlation matrix.<br />
+</li>
+<li>Add <code>method="spearman"</code> within the <code>corr.test()</code> parentheses for ranked data (For example: <code>corr.test(method = "spearman")</code>)<br />
+</li>
+<li>The <code>short = FALSE</code> in the <code>print()</code> parentheses prints the confidence intervals<br />
+</li>
+<li>Use <code>?corr.test</code> for more options</li>
+</ul>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="interrater-reliability.html#cb30-1"></a>irr <span class="op">%&gt;%</span></span>
+<span id="cb30-2"><a href="interrater-reliability.html#cb30-2"></a><span class="st">  </span><span class="kw">select</span>(looking_time_ns, looking_time_org, looking_time_dk) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb30-3"><a href="interrater-reliability.html#cb30-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb30-4"><a href="interrater-reliability.html#cb30-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## Call:corr.test(x = .)
+## Correlation matrix 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns             1.00             0.99            0.90
+## looking_time_org            0.99             1.00            0.89
+## looking_time_dk             0.90             0.89            1.00
+## Sample Size 
+## [1] 72
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns                0                0               0
+## looking_time_org               0                0               0
+## looking_time_dk                0                0               0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##                     raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## lkng_tm_n-lkng_tm_r      0.98  0.99      0.99     0      0.97      0.99
+## lkng_tm_n-lkng_tm_d      0.85  0.90      0.94     0      0.84      0.94
+## lkng_tm_r-lkng_tm_d      0.83  0.89      0.93     0      0.83      0.93</code></pre>
+<p>The first table in the output is the correlation matrix. Each number/cell in the correlation matrix shows the correlation between two variables. The coefficients above and below the diagonal (the 1.00s that go from the top left to bottom right) are redundant.</p>
+<p>The correlation between my looking times and the ManyBabies looking times is .99, and the correlation between my looking times and DK’s looking times is .90. The correlation between DK and the ManyBabies looking times is .89.</p>
+<p>The next table shows the probability associated with the correlation coefficients listed in the first table. These probabilities are the p-values from null hypothesis significance testing (NHST). NHST estimates the likelihood of getting results as extreme or more extreme given the null is true (i.e., given there is really no association between the variables). If this likelihood is sufficiently small (less than 5%), than we reject the null hypothesis and conclude that the association is more extreme than zero.</p>
+<p>The results show that the p-values associated with the correlation coefficients are all 0, which means that they are less than .001 (the default is for R to report 0 if the number is sufficiently small - but we know that 0 is never an option in NHST because the tails of the distribution are asymptotic). Since any number under .001 is also under the .05 threshold - all of the correlation coefficients are statistically significant in terms of NHST.</p>
+<p>The last table shows the confidence intervals. The confidence interval provides an interval estimate of a parameter. Here the parameter is the true correlation between two observations. This range fairly often contains the true association (population level) between the variables.</p>
+<p>In the present example, the correlation coefficient between mine and the ManyBabies looking time (r = .99) is a point estimate of the true association between mine and the ManyBabies looking time. The confidence interval (CI) gives us an interval estimate of this association (.98 to .99). I found the CI in the <code>lkng_tm_n-lkng_tm_r</code> row (RStudio automatically deletes the vowels from variables with long names to save space). This confidence interval is quite small, indicating a high amount of certainty about the true size of the association between mine and the ManyBabies looking time. A large confidence interval indicates uncertainty about the true size of an association.</p>
+<p>The confidence interval for the correlation between my looking times and DK’s looking times (<code>lkng_tm_n-lkng_tm_d</code>) is .89 and .94. The point estimate of this relation is .90 and the interval estimate is between .89 and .94.</p>
+<p>The confidence interval for the correlation between the DK and ManyBabies looking times (<code>lkng_tm_r-lkng_tm_d</code>) is .83 and .93.</p>
+<div id="apa-style-write-up-of-correlation-results" class="section level4">
+<h4><span class="header-section-number">8.1.2.1</span> APA-style write up of correlation results</h4>
+<p>There was a strong positive correlation between my looking time data and the ManyBabies looking time data (r = .99, p &lt; .001, CI.95 = .98 to .99) and between my looking time data and DK’s looking time data (r = .90, p &lt; .001, CI.95 = .89 to .94).</p>
+</div>
+</div>
+</div>
+<div id="data-analysis-by-participant" class="section level2">
+<h2><span class="header-section-number">8.2</span> Data analysis by participant</h2>
+<p>Then create the same scatterplots and correlation matrix for each baby In the event of low interrater reliability, it might be that raters were in more agreement for some babies than others.</p>
+<p>To do this you will have to use the <code>filter()</code> function of the tidyverse package, which creates subsets of a data frame. That is, <code>filter()</code> allows you to select certain rows in a dataset.</p>
+<p>There are many functions and operations that can be used inside <code>filter()</code> to construct the filter expression.</p>
+<p>We will be using <code>==</code> which means equal to. There is also <code>&gt;</code>, <code>&gt;=</code>, <code>&amp;</code>, <code>|</code>, etc.</p>
+<p>The command to select the looking times of the baby labeled sub5 is:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="interrater-reliability.html#cb32-1"></a>sub5 &lt;-<span class="st"> </span>irr <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb32-2"><a href="interrater-reliability.html#cb32-2"></a><span class="st">  </span><span class="kw">filter</span>(subid <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</span></code></pre></div>
+<ul>
+<li>The <code>sub5 &lt;-</code> part of the command saves the subsample into a new data object called sub 5.<br />
+</li>
+<li><code>subid == 5</code> tells are to select all of the rows that have <code>5</code> in the column labeled <code>subid</code></li>
+</ul>
+<p>After this is run, there will be a new object in the environment called sub5. It has 18 observations (which is the number of trials in the ManyBabies study) and it has the same 7 variables in it that the irr dataset had (just only for subid 5).</p>
+<p>Next create new data objects for the other 3 babies:</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="interrater-reliability.html#cb33-1"></a>sub12 &lt;-<span class="st"> </span>irr <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb33-2"><a href="interrater-reliability.html#cb33-2"></a><span class="st">  </span><span class="kw">filter</span>(subid <span class="op">==</span><span class="st"> </span><span class="dv">12</span>)</span>
+<span id="cb33-3"><a href="interrater-reliability.html#cb33-3"></a></span>
+<span id="cb33-4"><a href="interrater-reliability.html#cb33-4"></a>sub25 &lt;-<span class="st"> </span>irr <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb33-5"><a href="interrater-reliability.html#cb33-5"></a><span class="st">  </span><span class="kw">filter</span>(subid <span class="op">==</span><span class="st"> </span><span class="dv">25</span>)</span>
+<span id="cb33-6"><a href="interrater-reliability.html#cb33-6"></a></span>
+<span id="cb33-7"><a href="interrater-reliability.html#cb33-7"></a>sub33 &lt;-<span class="st"> </span>irr <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb33-8"><a href="interrater-reliability.html#cb33-8"></a><span class="st">  </span><span class="kw">filter</span>(subid <span class="op">==</span><span class="st"> </span><span class="dv">33</span>)</span></code></pre></div>
+<div id="scatterplot-1" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Scatterplot</h3>
+<p>Then create scatterplots of the relation between the looking time data by each baby.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="interrater-reliability.html#cb34-1"></a><span class="kw">ggplot</span>(sub12, <span class="kw">aes</span>(<span class="dt">x=</span>looking_time_ns, <span class="dt">y=</span>looking_time_org)) <span class="op">+</span></span>
+<span id="cb34-2"><a href="interrater-reliability.html#cb34-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-327_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="interrater-reliability.html#cb35-1"></a><span class="kw">ggplot</span>(sub12, <span class="kw">aes</span>(<span class="dt">x=</span>looking_time_ns, <span class="dt">y=</span>looking_time_dk)) <span class="op">+</span></span>
+<span id="cb35-2"><a href="interrater-reliability.html#cb35-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-327_files/figure-html/unnamed-chunk-29-2.png" width="672" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="interrater-reliability.html#cb36-1"></a><span class="kw">ggplot</span>(sub12, <span class="kw">aes</span>(<span class="dt">x=</span>looking_time_dk, <span class="dt">y=</span>looking_time_org)) <span class="op">+</span></span>
+<span id="cb36-2"><a href="interrater-reliability.html#cb36-2"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-327_files/figure-html/unnamed-chunk-29-3.png" width="672" /></p>
+<p>The scatterplots look pretty consistent to me.</p>
+</div>
+<div id="correlation-coefficient-1" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Correlation coefficient</h3>
+<p>Then create correlation matrix of the three looking times separately for each baby:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="interrater-reliability.html#cb37-1"></a>sub5 <span class="op">%&gt;%</span></span>
+<span id="cb37-2"><a href="interrater-reliability.html#cb37-2"></a><span class="st">  </span><span class="kw">select</span>(looking_time_ns, looking_time_org, looking_time_dk) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb37-3"><a href="interrater-reliability.html#cb37-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb37-4"><a href="interrater-reliability.html#cb37-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## Call:corr.test(x = .)
+## Correlation matrix 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns             1.00             0.99            0.98
+## looking_time_org            0.99             1.00            0.99
+## looking_time_dk             0.98             0.99            1.00
+## Sample Size 
+## [1] 18
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns                0                0               0
+## looking_time_org               0                0               0
+## looking_time_dk                0                0               0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##                     raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## lkng_tm_n-lkng_tm_r      0.98  0.99      1.00     0      0.97      1.00
+## lkng_tm_n-lkng_tm_d      0.95  0.98      0.99     0      0.95      0.99
+## lkng_tm_r-lkng_tm_d      0.96  0.99      1.00     0      0.96      1.00</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="interrater-reliability.html#cb39-1"></a>sub12 <span class="op">%&gt;%</span></span>
+<span id="cb39-2"><a href="interrater-reliability.html#cb39-2"></a><span class="st">  </span><span class="kw">select</span>(looking_time_ns, looking_time_org, looking_time_dk) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb39-3"><a href="interrater-reliability.html#cb39-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb39-4"><a href="interrater-reliability.html#cb39-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## Call:corr.test(x = .)
+## Correlation matrix 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns             1.00             0.98            0.87
+## looking_time_org            0.98             1.00            0.83
+## looking_time_dk             0.87             0.83            1.00
+## Sample Size 
+## [1] 18
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns                0                0               0
+## looking_time_org               0                0               0
+## looking_time_dk                0                0               0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##                     raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## lkng_tm_n-lkng_tm_r      0.94  0.98      0.99     0      0.93      0.99
+## lkng_tm_n-lkng_tm_d      0.67  0.87      0.95     0      0.63      0.96
+## lkng_tm_r-lkng_tm_d      0.59  0.83      0.93     0      0.59      0.93</code></pre>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="interrater-reliability.html#cb41-1"></a>sub25 <span class="op">%&gt;%</span></span>
+<span id="cb41-2"><a href="interrater-reliability.html#cb41-2"></a><span class="st">  </span><span class="kw">select</span>(looking_time_ns, looking_time_org, looking_time_dk) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb41-3"><a href="interrater-reliability.html#cb41-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb41-4"><a href="interrater-reliability.html#cb41-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## Call:corr.test(x = .)
+## Correlation matrix 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns             1.00             0.98            0.89
+## looking_time_org            0.98             1.00            0.88
+## looking_time_dk             0.89             0.88            1.00
+## Sample Size 
+## [1] 18
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns                0                0               0
+## looking_time_org               0                0               0
+## looking_time_dk                0                0               0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##                     raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## lkng_tm_n-lkng_tm_r      0.95  0.98      0.99     0      0.94      0.99
+## lkng_tm_n-lkng_tm_d      0.73  0.89      0.96     0      0.69      0.96
+## lkng_tm_r-lkng_tm_d      0.71  0.88      0.96     0      0.71      0.96</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="interrater-reliability.html#cb43-1"></a>sub33 <span class="op">%&gt;%</span></span>
+<span id="cb43-2"><a href="interrater-reliability.html#cb43-2"></a><span class="st">  </span><span class="kw">select</span>(looking_time_ns, looking_time_org, looking_time_dk) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb43-3"><a href="interrater-reliability.html#cb43-3"></a><span class="st">  </span><span class="kw">corr.test</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb43-4"><a href="interrater-reliability.html#cb43-4"></a><span class="st">  </span><span class="kw">print</span>(<span class="dt">short=</span><span class="ot">FALSE</span>)</span></code></pre></div>
+<pre><code>## Call:corr.test(x = .)
+## Correlation matrix 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns             1.00             0.99            0.96
+## looking_time_org            0.99             1.00            0.98
+## looking_time_dk             0.96             0.98            1.00
+## Sample Size 
+## [1] 18
+## Probability values (Entries above the diagonal are adjusted for multiple tests.) 
+##                  looking_time_ns looking_time_org looking_time_dk
+## looking_time_ns                0                0               0
+## looking_time_org               0                0               0
+## looking_time_dk                0                0               0
+## 
+##  Confidence intervals based upon normal theory.  To get bootstrapped values, try cor.ci
+##                     raw.lower raw.r raw.upper raw.p lower.adj upper.adj
+## lkng_tm_n-lkng_tm_r      0.97  0.99      1.00     0      0.96      1.00
+## lkng_tm_n-lkng_tm_d      0.89  0.96      0.99     0      0.89      0.99
+## lkng_tm_r-lkng_tm_d      0.94  0.98      0.99     0      0.93      0.99</code></pre>
+<p>Again, the associations between the raters seemed pretty consistent across the babies.</p>
+</div>
+</div>
+<div id="overall-conculsion" class="section level2">
+<h2><span class="header-section-number">8.3</span> Overall conculsion</h2>
+<p>Based on the scatterplots and correlation coefficients we can conclude that the looking time variable has strong interrater reliability. It seems that 3 independent observers are in agreement about when the babies are looking at the screen.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="basic-data-transformations.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cjvanlissa/gitbook-demo/edit/master/irr.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Tools for working with data 327.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
