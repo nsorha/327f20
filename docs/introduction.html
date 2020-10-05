@@ -24,7 +24,7 @@
 <meta name="author" content="Nicole Sorhagen, Ph.D." />
 
 
-<meta name="date" content="2020-10-02" />
+<meta name="date" content="2020-10-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -145,6 +145,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#upload-the-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2.1</b> Upload the data into Rstudio Cloud</a></li>
 <li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#import-data"><i class="fa fa-check"></i><b>3.2.2</b> Import data</a></li>
 </ul></li>
+<li class="chapter" data-level="3.3" data-path="introduction.html"><a href="introduction.html#more-on-objects-in-the-environment"><i class="fa fa-check"></i><b>3.3</b> More on objects in the environment</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
 <li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
@@ -388,9 +389,16 @@ Make sure the file remains a .cvs file after you download it. If you open it in 
 - The third column is the number of hours the students studied for the exam (this is made up data).<br />
 - The fourth column is whether or not students ate cheese the night before the exam (1 = no; 2 = yes… also made up data).<br />
 - The last column is data on whether or not students drank wine the night before the exam (1 = no; 2 = yes… also made up data).</p>
+</div>
+</div>
+</div>
+<div id="more-on-objects-in-the-environment" class="section level2">
+<h2><span class="header-section-number">3.3</span> More on objects in the environment</h2>
+<p>You can remove the objects in the environment by clicking on the broom next to import data in the environment panel.</p>
+<p><img src="img/broom.png" /></p>
+<p>To clear specific objects from the workspace with the <code>rm()</code> function. For example, <code>remove(exam2)</code> would remove just the exam2 object.</p>
+<p>You can rename the objects in the environment with the <code>&lt;-</code>. For example, <code>eaxm2fall &lt;- exam2</code> would create an object called exam2fall with the exact same content as the exam2 object.</p>
 
-</div>
-</div>
 </div>
 </div>
             </section>

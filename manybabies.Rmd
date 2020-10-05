@@ -7,6 +7,7 @@ library(tidyverse)
 mbaby <- read_csv("ICCL-BCns.csv") 
 mbaby <- read_csv("musdev-utm_TrialDatans.csv") 
 mbaby <- read_csv("earlysocog-fm_9-12ns.csv") 
+mbaby <- read_csv("earlysocogfm.csv") 
 
 #gmbaby <- mbaby %>% 
 #  group_by(subid, trial_type) %>% 
@@ -35,8 +36,15 @@ mbabywide <- mbabys %>% pivot_wider(names_from = stimulus, values_from = looking
 write_csv(mbabywide, "ICCLbc.csv")
 write_csv(mbabywide, "musdevutm.csv")
 write_csv(mbabywide, "fm9to12.csv")
+write_csv(mbabywide, "fm.csv")
 
-# need to make 4 more
+# need to make 4 more 
+# maybe not - if combining groups
+
+
+
+total <- rbind(ICCLbc, musdevutm, fm)
+
 
 
 ```
@@ -76,15 +84,49 @@ fm9to12 <- fm9to12 %>%
     mutate(ads = ADS1 + ADS2 + ADS3 + ADS4 + ADS5 + ADS6 + ADS7 + ADS8)
 
 
-
 t.test(fm9to12$ids, fm9to12$ads, paired = TRUE)
-
-
 
 
 ggplot(fm9to12, aes(x = as.factor(cheese), y = exam2pts)) +
   geom_point(color = "purple") +
   stat_summary(fun.data = mean_cl_normal)
 
+
+fm <- read_csv("fm.csv") 
+
+fm <- fm %>% 
+    mutate(ids = IDS1 + IDS2 + IDS3 + IDS4 + IDS5 + IDS6 + IDS7 + IDS8)
+
+fm <- fm %>% 
+    mutate(ads = ADS1 + ADS2 + ADS3 + ADS4 + ADS5 + ADS6 + ADS7 + ADS8)
+
+
+t.test(fm$ids, fm$ads, paired = TRUE)
+
+
+t.test(total$ids, total$ads, paired = TRUE)
+
+
 ```
+
+
+
+```{r}
+
+ICCLbcs <- ICCLbc %>% select(subid, ids, ads)
+
+ICCLbclong <- ICCLbcs %>% 
+  gather(key = "condition", value = "time", ids:ads)
+
+head(ICCLbclong)
+
+ggplot(ICCLbclong, aes(x = as.factor(condition), y = time)) +
+  geom_point(color = "pink") +
+  stat_summary(fun.data = mean_cl_normal)
+
+```
+
+
+
+
 

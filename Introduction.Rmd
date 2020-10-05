@@ -298,8 +298,16 @@ Each column is a different variable. Each row is a different participant (in thi
 -	The fourth column is whether or not students ate cheese the night before the exam (1 = no; 2 = yes… also made up data).  
 -	The last column is data on whether or not students drank wine the night before the exam (1 = no; 2 = yes… also made up data). 
 
+## More on objects in the environment
+
+You can remove the objects in the environment by clicking on the broom next to import data in the environment panel.  
+
+![](img/broom.png)  
 
 
+To clear specific objects from the workspace with the `rm()` function. For example, `remove(exam2)` would remove just the exam2 object.  
+
+You can rename the objects in the environment with the `<-`. For example, `eaxm2fall <- exam2` would create an object called exam2fall with the exact same content as the exam2 object.   
 
 
 

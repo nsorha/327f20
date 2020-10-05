@@ -4,7 +4,7 @@
 
 For this section we will use a dataset from SPSS for Research Methods by Wilson-Doenges, which comes with our Morling text. [Here](https://docs.google.com/document/d/1V1vHljcqtVYXE-2iHcdcR0FNzjdCmJXc6Je5TuWMPuk/edit?usp=sharing) is the survey that Wilson-Doenges distributed to 45 students.  
 
-You can find the data on D2L called `‘wilson.csv’`.  
+You can find the data on D2L called `‘wilson.csv’`.  (in week4 content)
  
 Please download it and take a few minutes to look over the survey (open the link above in the word ‘here’) and study how Wilson-Doenges entered in her data.  
 
