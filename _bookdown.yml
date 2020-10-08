@@ -6,7 +6,8 @@ rmd_files: ["index.Rmd",
             "plots.Rmd",
             "Descriptives.Rmd",
             "datatran.Rmd",
-            "irr.Rmd"]
+            "irr.Rmd",
+            "simexper.Rmd"]
 output_dir: "docs"
 language:
   ui:

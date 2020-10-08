@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Estimating the difference between dependent group means | Tools for Working with Data - 327</title>
+  <meta name="description" content="This GitBook describes tools 327 students can use to work with data." />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Estimating the difference between dependent group means | Tools for Working with Data - 327" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This GitBook describes tools 327 students can use to work with data." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Estimating the difference between dependent group means | Tools for Working with Data - 327" />
+  
+  <meta name="twitter:description" content="This GitBook describes tools 327 students can use to work with data." />
+  
+
+<meta name="author" content="Nicole Sorhagen, Ph.D." />
+
+
+<meta name="date" content="2020-10-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="interrater-reliability.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A GitBook for Teaching</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About this book</a></li>
+<li class="chapter" data-level="2" data-path="set-up-project-on-rstudio-cloud.html"><a href="set-up-project-on-rstudio-cloud.html"><i class="fa fa-check"></i><b>2</b> Set up project on Rstudio Cloud</a></li>
+<li class="chapter" data-level="3" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1" data-path="introduction.html"><a href="introduction.html#layout-of-rstudio"><i class="fa fa-check"></i><b>3.1</b> Layout of Rstudio</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="introduction.html"><a href="introduction.html#console"><i class="fa fa-check"></i><b>3.1.1</b> Console</a></li>
+<li class="chapter" data-level="3.1.2" data-path="introduction.html"><a href="introduction.html#script"><i class="fa fa-check"></i><b>3.1.2</b> Script</a></li>
+<li class="chapter" data-level="3.1.3" data-path="introduction.html"><a href="introduction.html#environment-and-history"><i class="fa fa-check"></i><b>3.1.3</b> Environment and history</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#importing-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2</b> Importing data into Rstudio cloud</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="introduction.html"><a href="introduction.html#upload-the-data-into-rstudio-cloud"><i class="fa fa-check"></i><b>3.2.1</b> Upload the data into Rstudio Cloud</a></li>
+<li class="chapter" data-level="3.2.2" data-path="introduction.html"><a href="introduction.html#import-data"><i class="fa fa-check"></i><b>3.2.2</b> Import data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="introduction.html"><a href="introduction.html#more-on-objects-in-the-environment"><i class="fa fa-check"></i><b>3.3</b> More on objects in the environment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>4</b> Packages</a><ul>
+<li class="chapter" data-level="4.1" data-path="packages.html"><a href="packages.html#installing-packages"><i class="fa fa-check"></i><b>4.1</b> Installing packages</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="packages.html"><a href="packages.html#installing-packages-using-point-and-click-gui"><i class="fa fa-check"></i><b>4.1.1</b> Installing packages using point and click (GUI)</a></li>
+<li class="chapter" data-level="4.1.2" data-path="packages.html"><a href="packages.html#installing-packages-using-code"><i class="fa fa-check"></i><b>4.1.2</b> Installing packages using code</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="packages.html"><a href="packages.html#loading-packages"><i class="fa fa-check"></i><b>4.2</b> Loading Packages</a></li>
+<li class="chapter" data-level="4.3" data-path="packages.html"><a href="packages.html#misc"><i class="fa fa-check"></i><b>4.3</b> Misc</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="packages.html"><a href="packages.html#restarting-r"><i class="fa fa-check"></i><b>4.3.1</b> Restarting R</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="picturing-data.html"><a href="picturing-data.html"><i class="fa fa-check"></i><b>5</b> Picturing Data</a><ul>
+<li class="chapter" data-level="5.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms"><i class="fa fa-check"></i><b>5.1</b> Histograms</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-base-r"><i class="fa fa-check"></i><b>5.1.1</b> Histograms with base R</a></li>
+<li class="chapter" data-level="5.1.2" data-path="picturing-data.html"><a href="picturing-data.html#histograms-with-tidyverse"><i class="fa fa-check"></i><b>5.1.2</b> Histograms with tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="picturing-data.html"><a href="picturing-data.html#scatterplots"><i class="fa fa-check"></i><b>5.2</b> Scatterplots</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="picturing-data.html"><a href="picturing-data.html#two-continuous-variables"><i class="fa fa-check"></i><b>5.2.1</b> Two continuous variables</a></li>
+<li class="chapter" data-level="5.2.2" data-path="picturing-data.html"><a href="picturing-data.html#one-continuous-and-one-categorical-variable"><i class="fa fa-check"></i><b>5.2.2</b> One continuous and one categorical variable</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="picturing-data.html"><a href="picturing-data.html#additional-resources"><i class="fa fa-check"></i><b>5.3</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>6</b> Descriptive Statistics</a><ul>
+<li class="chapter" data-level="6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-tidyverse-and-psych-packages."><i class="fa fa-check"></i><b>6.1</b> Descriptive statistics using Tidyverse and Psych packages.</a></li>
+<li class="chapter" data-level="6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#descriptive-statistics-using-base-r"><i class="fa fa-check"></i><b>6.2</b> Descriptive statistics using base R</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="basic-data-transformations.html"><a href="basic-data-transformations.html"><i class="fa fa-check"></i><b>7</b> Basic Data Transformations</a></li>
+<li class="chapter" data-level="8" data-path="interrater-reliability.html"><a href="interrater-reliability.html"><i class="fa fa-check"></i><b>8</b> Interrater reliability</a><ul>
+<li class="chapter" data-level="8.1" data-path="interrater-reliability.html"><a href="interrater-reliability.html#data-analysis"><i class="fa fa-check"></i><b>8.1</b> Data analysis</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="interrater-reliability.html"><a href="interrater-reliability.html#scatterplot"><i class="fa fa-check"></i><b>8.1.1</b> Scatterplot</a></li>
+<li class="chapter" data-level="8.1.2" data-path="interrater-reliability.html"><a href="interrater-reliability.html#correlation-coefficient"><i class="fa fa-check"></i><b>8.1.2</b> Correlation coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="interrater-reliability.html"><a href="interrater-reliability.html#data-analysis-by-participant"><i class="fa fa-check"></i><b>8.2</b> Data analysis by participant</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="interrater-reliability.html"><a href="interrater-reliability.html#scatterplot-1"><i class="fa fa-check"></i><b>8.2.1</b> Scatterplot</a></li>
+<li class="chapter" data-level="8.2.2" data-path="interrater-reliability.html"><a href="interrater-reliability.html#correlation-coefficient-1"><i class="fa fa-check"></i><b>8.2.2</b> Correlation coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="interrater-reliability.html"><a href="interrater-reliability.html#overall-conculsion"><i class="fa fa-check"></i><b>8.3</b> Overall conculsion</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html"><i class="fa fa-check"></i><b>9</b> Estimating the difference between dependent group means</a><ul>
+<li class="chapter" data-level="9.1" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#research-question"><i class="fa fa-check"></i><b>9.1</b> Research question</a></li>
+<li class="chapter" data-level="9.2" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#method"><i class="fa fa-check"></i><b>9.2</b> Method</a></li>
+<li class="chapter" data-level="9.3" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#data-analysis-1"><i class="fa fa-check"></i><b>9.3</b> Data analysis</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#open-data-and-load-the-neccessary-packages."><i class="fa fa-check"></i><b>9.3.1</b> Open data and load the neccessary packages.</a></li>
+<li class="chapter" data-level="9.3.2" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#descriptive-statistics-and-assumptions"><i class="fa fa-check"></i><b>9.3.2</b> Descriptive statistics and assumptions</a></li>
+<li class="chapter" data-level="9.3.3" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#stats"><i class="fa fa-check"></i><b>9.3.3</b> Stats</a></li>
+<li class="chapter" data-level="9.3.4" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#apa-style-write-up"><i class="fa fa-check"></i><b>9.3.4</b> 5. APA-style write up</a></li>
+<li class="chapter" data-level="9.3.5" data-path="estimating-the-difference-between-dependent-group-means.html"><a href="estimating-the-difference-between-dependent-group-means.html#scatterplots-1"><i class="fa fa-check"></i><b>9.3.5</b> Scatterplots</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Tools for Working with Data - 327</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="estimating-the-difference-between-dependent-group-means" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Estimating the difference between dependent group means</h1>
+<div id="research-question" class="section level2">
+<h2><span class="header-section-number">9.1</span> Research question</h2>
+<p>Do fidget spinners help you concentrate? Soares and Storm (2019) asked college-aged students to watch an educational video with and without a fidget spinner. They found that participants remembered more information about the video they watched without the fidget spinner than the video they watched with it.</p>
+</div>
+<div id="method" class="section level2">
+<h2><span class="header-section-number">9.2</span> Method</h2>
+<p>Imagine you replicated Soares and Storm (2019) with a convenience sample of 20 classmates and friends. Participants watched two educational videos about lesser known historical figures. Each video was about 10 minutes. Participants were run individually.</p>
+<p>The order of the conditions was counterbalanced across participants so that half of the participants were given the fidget spinner while watching the first video and not the second video. The other half of the participants watched the first video without the fidget spinner and were given the fidget spinner for the second video.</p>
+<p>After each video participants completed an unrelated task for 5 minutes and then were given a 15 item fill in the blank test about the video content.</p>
+</div>
+<div id="data-analysis-1" class="section level2">
+<h2><span class="header-section-number">9.3</span> Data analysis</h2>
+<div id="open-data-and-load-the-neccessary-packages." class="section level3">
+<h3><span class="header-section-number">9.3.1</span> Open data and load the neccessary packages.</h3>
+<p>Then open the data, which is in fidget.csv on D2L.</p>
+<p>After you load it into your RStudio cloud project, open the data with the IMPORT DATASET point and click method, or with this code:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb45-1"></a><span class="kw">library</span>(readr)</span>
+<span id="cb45-2"><a href="estimating-the-difference-between-dependent-group-means.html#cb45-2"></a>fidex &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;fidex.csv&quot;</span>)</span></code></pre></div>
+<p>Then load the tidyverse and psych packages with this code:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb46-1"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb46-2"><a href="estimating-the-difference-between-dependent-group-means.html#cb46-2"></a><span class="kw">library</span>(psych)</span></code></pre></div>
+<p>Note the layout of the data here. Let’s use the <code>head()</code> function to look at the first 3 rows of the dataset:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb47-1"></a><span class="kw">head</span>(fidex, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##      id wofid  wfid
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     1     6     3
+## 2     2    15     4
+## 3     3     9     3</code></pre>
+<p>Remember that in a spreadsheet, each row typically represents an individual participant in the study. So, with a within subject design, the IV data will be split into to different columns. In this example the wfid is the test scores for the video watched with the fidget spinner and the wofid is the test scores for the video watched without the fidget spinner.</p>
+<p>A column with the difference between the two levels of the IV is needed for within subject data analysis. So, let’s create it now using the <code>mutate()</code> function (which is part of the tidyverse package)</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb49-1"></a>fidex &lt;-<span class="st"> </span>fidex <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb49-2"><a href="estimating-the-difference-between-dependent-group-means.html#cb49-2"></a><span class="st">            </span><span class="kw">mutate</span>(<span class="dt">diff =</span> wofid <span class="op">-</span><span class="st"> </span>wfid)</span>
+<span id="cb49-3"><a href="estimating-the-difference-between-dependent-group-means.html#cb49-3"></a></span>
+<span id="cb49-4"><a href="estimating-the-difference-between-dependent-group-means.html#cb49-4"></a><span class="kw">head</span>(fidex, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## # A tibble: 3 x 4
+##      id wofid  wfid  diff
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     1     6     3     3
+## 2     2    15     4    11
+## 3     3     9     3     6</code></pre>
+<p>The first participant scored a 6 on the test about the video he/she watched without the fidget spinner and a 3 on the test of the video watched with the fidget spinner. The difference between the scores is 3 points.</p>
+</div>
+<div id="descriptive-statistics-and-assumptions" class="section level3">
+<h3><span class="header-section-number">9.3.2</span> Descriptive statistics and assumptions</h3>
+<p>Let’s first compute measures of central tendency and variability.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb51-1"></a>fidex <span class="op">%&gt;%</span></span>
+<span id="cb51-2"><a href="estimating-the-difference-between-dependent-group-means.html#cb51-2"></a><span class="st">  </span><span class="kw">select</span> (wofid, wfid) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb51-3"><a href="estimating-the-difference-between-dependent-group-means.html#cb51-3"></a><span class="st">  </span><span class="kw">describe</span>()</span></code></pre></div>
+<pre><code>##       vars  n  mean   sd median trimmed  mad min max range  skew kurtosis   se
+## wofid    1 20 10.55 3.25   10.5   10.62 3.71   5  15    10 -0.17    -1.39 0.73
+## wfid     2 20  5.60 3.36    6.5    5.69 4.45   0  10    10 -0.22    -1.49 0.75</code></pre>
+<p><strong>Interpretation</strong><br />
+We can see that the participants in the without fidget spinner condition got an average of 10.55 questions correct (SD = 3.25, range = 5 - 15), while the participants in the with fidget spinner condition got an average of 5.60 questions correct (SD = 3.36, range = 0 - 10). The results show that the minimum and maximum values are all within the range of possible values.</p>
+<p>Next test the normality of the difference scores with a Shapiro-Wilk test:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb53-1"></a><span class="kw">shapiro.test</span>(fidex<span class="op">$</span>diff)</span></code></pre></div>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  fidex$diff
+## W = 0.97287, p-value = 0.8139</code></pre>
+<p>A significant test of normality (Shapiro-Wilk test) indicates that the data is not normally distributed. With non-normal data, a Paired Samples Wilcoxon test should be used, which is a nonparametric alternative to the related-sample t-test.</p>
+<p>In this example, the test of equality of variance is nonsignificant. This means that in the next step you should use a Student’s related sample t-test, which assumes that the difference scores are normally distributed.</p>
+</div>
+<div id="stats" class="section level3">
+<h3><span class="header-section-number">9.3.3</span> Stats</h3>
+<p>Use the t-test function to find the CI and NHST with this base R code:</p>
+<p><code>t.test(fidex$wofid, fidex$wfid, paired = TRUE)</code>
+* The within-subjects t-test uses the same <code>t.test()</code> function as you did with independent samples. However, this time you have to use the form of: level1, level2<br />
+* I also think you have to direct R to the variable with the $ method (I could not get this to run with the data = )<br />
+* The <code>paired=TRUE</code> tells T that it is a within subjects design</p>
+<p>Here are the results:</p>
+<pre><code>## 
+##  Paired t-test
+## 
+## data:  fidex$wofid and fidex$wfid
+## t = 5.0789, df = 19, p-value = 6.667e-05
+## alternative hypothesis: true difference in means is not equal to 0
+## 95 percent confidence interval:
+##  2.910114 6.989886
+## sample estimates:
+## mean of the differences 
+##                    4.95</code></pre>
+<p><strong>Interpretation</strong><br />
+The results show that the 95% CI is 2.910114 to 6.989886, which means that the true difference in the number of correct test questions remembered based on fidget spinner use is likely to be between about 3 and 7 correct questions.</p>
+<p>The results also report that t = 5.0789, df = 19, p-value = 6.667e-05 - so the difference is statistically significant.</p>
+<p>Next find the effect size using the effsize package. Here is the code:</p>
+<p><code>library(effsize)</code><br />
+<code>cohen.d(fidex$wofid, fidex$wfid, paired=TRUE)</code></p>
+<ul>
+<li>Again, with within-subjects the cohens.d function takes the form of: level1, level2<br />
+</li>
+<li>The <code>paired=TRUE</code> tells r that it is a within subjects design</li>
+</ul>
+<pre><code>## 
+## Attaching package: &#39;effsize&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:psych&#39;:
+## 
+##     cohen.d</code></pre>
+<pre><code>## 
+## Cohen&#39;s d
+## 
+## d estimate: 1.496451 (large)
+## 95 percent confidence interval:
+##     lower     upper 
+## 0.6280516 2.3648508</code></pre>
+<p><strong>Interpretation</strong><br />
+The effect size is 1.496451, which is large. The 95% CI is 0.6280516 to 2.3648508, suggesting there is a high level of uncertainty in the size of the effect here.</p>
+</div>
+<div id="apa-style-write-up" class="section level3">
+<h3><span class="header-section-number">9.3.4</span> 5. APA-style write up</h3>
+<p>Participants remembered more information about the video they watched without the fidget spinner (M = 10.50, SD = 3.25) compared to the video that they watch with the fidget spinner (M = 5.60, SD = 3.36).</p>
+<p>Therefore, the average difference in the number of correct test questions between the groups was 4.9 questions. The 95%CI on this difference was 2.91 to 6.99 correct questions. This CI means that the true difference in the number of correct test questions remembered based fidget spinner use is likely to be between about 3 and 7 correct questions.</p>
+<p>The standardized effect size of the difference between test score without and with fidget spinners was d = 1.50 (CI.95: 0.63 to 2.36). This effect would be classified by Cohen’s conventions as large.</p>
+<p>These 95%CIs do not contain zero, so we can conclude that the difference between the two conditions is statistically significant (t(19) = 5.08, p &lt; .001).</p>
+</div>
+<div id="scatterplots-1" class="section level3">
+<h3><span class="header-section-number">9.3.5</span> Scatterplots</h3>
+<p>You may have noticed that we did not create a scatterplot during this example. I would like to talk about why…</p>
+<p>Within subject data can actually take two organizational formats. The data we were just working with above was in wide format, which means that a participant’s responses will all be in a single row, and each response is in a separate column.</p>
+<p>The another option is call long format. Instead of having every row represent an individual participant, each row is one time point per subject.</p>
+<p>Dplyr (of tidyverse) turns wide data into long data. Here is the code we will use:</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb59-1"></a>fidexlong &lt;-<span class="st"> </span>fidex <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb59-2"><a href="estimating-the-difference-between-dependent-group-means.html#cb59-2"></a><span class="st">  </span><span class="kw">gather</span>(<span class="dt">key =</span> <span class="st">&quot;condition&quot;</span>, <span class="dt">value =</span> <span class="st">&quot;score&quot;</span>, wfid<span class="op">:</span>wofid)</span>
+<span id="cb59-3"><a href="estimating-the-difference-between-dependent-group-means.html#cb59-3"></a></span>
+<span id="cb59-4"><a href="estimating-the-difference-between-dependent-group-means.html#cb59-4"></a><span class="kw">head</span>(fidexlong)</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 4
+##      id  diff condition score
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt;
+## 1     1     3 wfid          3
+## 2     2    11 wfid          4
+## 3     3     6 wfid          3
+## 4     4     3 wfid          3
+## 5     5    10 wfid          0
+## 6     6     7 wfid          8</code></pre>
+<ul>
+<li>fidexlong &lt;- fidex saves the work so we can use it. I chose to save this in a new dataset in case I fuck it up.<br />
+</li>
+<li>More detail on the the <code>gather()</code> function:
+<ul>
+<li>In the <code>key =</code> put the name of the repeated measures. So here it is <code>"condition"</code> because the IV is a condition (fidget spinner and no fidget spinner). Note that we could have an a within subject association claim where one variable is time (time 1 and time 2). Here you should have: key = “time”<br />
+</li>
+<li>In the <code>value =</code> put the name of the variable that was measured multiple times. In the present example is the <code>score</code> of the test of educational video content knowledge. + <code>wfid:wofid</code> is the columns that need to be rearranged. The columns with the data in it.</li>
+</ul></li>
+</ul>
+<p>After you create the new dataset, note that there are now two rows for each ID number: one for test score with the fidget spinner and one for the test score without the fidget spinner. If you ran this code with the dataset that you mutated by creating the difference score, both the ID and difference scores will be repeating. (You may need to sort the subids using the little arrows in the data view to see the two rows easily.)</p>
+<p>Once we format the data as long instead of wide, we can use ggplots to look at the spread of means and individuals datapoints:</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="estimating-the-difference-between-dependent-group-means.html#cb61-1"></a><span class="kw">ggplot</span>(fidexlong, <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">as.factor</span>(condition), <span class="dt">y =</span> score)) <span class="op">+</span></span>
+<span id="cb61-2"><a href="estimating-the-difference-between-dependent-group-means.html#cb61-2"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">color =</span> <span class="st">&quot;pink&quot;</span>) <span class="op">+</span></span>
+<span id="cb61-3"><a href="estimating-the-difference-between-dependent-group-means.html#cb61-3"></a><span class="st">  </span><span class="kw">stat_summary</span>(<span class="dt">fun.data =</span> mean_cl_normal)</span></code></pre></div>
+<p><img src="Tools-for-working-with-data-327_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="interrater-reliability.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cjvanlissa/gitbook-demo/edit/master/simexper.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Tools for working with data 327.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
